@@ -1,6 +1,6 @@
-# Webpack Starter Project
+# Achernar Admin Template
 
-This is my personal Webpack starter setup for using:
+This is my personal Admin Template Project setup for using:
 - [ES6](https://developer.mozilla.org/fr/docs/Web/JavaScript) compiled through [Babel](https://babeljs.io)
 - [Sass](https://sass-lang.com)
 - [PostCSS](https://postcss.org)
@@ -16,7 +16,7 @@ npm install
 yarn
 ```
 
-## Webpack development server
+## Development server
 To start up a Webpack Development Server, run the following command:
 
 ```
