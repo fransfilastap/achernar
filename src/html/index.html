@@ -27,12 +27,10 @@
   </style>
 </head>
 
-<body style="background-color: #F0F4FB;">
-  <div x-data="{sidebarOpen:false}" class="flex h-screen font-sans py-2 px-2 leading-normal tracking-normal">
-    <div :class="sidebarOpen ? 'block' : 'hidden'" @click="sidebarOpen = false"
-      class="fixed z-20 inset-0 transition-opacity lg:hidden"></div>
-    <div :class="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'"
-      class="fixed h-full overflow-y-scroll transition duration-300 transform w-64 md:top-0 md:left-0 lg:translate-x-0 lg:static lg:inset-0 z-40"
+<body class="antialiased" style="background-color: #F0F4FB;">
+  <div class="flex h-screen font-sans py-2 px-2 leading-normal tracking-normal">
+    <div
+      class="hidden lg:block -translate-x-full h-full overflow-y-scroll transition duration-300 transform w-1/2 lg:w-64 md:top-0 md:left-0 lg:translate-x-0 lg:inset-0"
       style="background-color: #F0F4FB;">
 
       <!-- logo -->
@@ -63,14 +61,9 @@
 
       <div class="mt-6 px-2">
         <p class="text-xs ml-3 font-semibold mb-2 text-gray-500">PENGUSULAN</p>
-        <div
-          x-data="{ open:false }"
-          @click="open=!open"
-          class="flex-1 cursor-pointer">
-          <div
-            class="flex justify-between p-2 rounded-md hover:bg-blue-900 hover:text-white"
-            :class="open ? 'bg-blue-900 text-white' : 'text-gray-600'"
-            >
+        <div x-data="{ open:false }" @click="open=!open" class="flex-1 cursor-pointer">
+          <div class="flex justify-between p-2 rounded-md hover:bg-blue-900 hover:text-white"
+            :class="open ? 'bg-blue-900 text-white' : 'text-gray-600'">
             <div class="flex justify-items-stretch">
               <svg class="w-5 h-5 my-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
@@ -87,7 +80,8 @@
                 clip-rule="evenodd"></path>
             </svg>
           </div>
-          <div :class="open ? 'block' : 'hidden'" class="relative p-2 font-semibold text-xs ml-6 transform duration-300 ease-in-out">
+          <div :class="open ? 'block' : 'hidden'"
+            class="relative p-2 font-semibold text-xs ml-6 transform duration-300 ease-in-out">
             <ul>
               <li class="my-1 text-gray-600 hover:text-blue-500">
                 Prolegnas Jangka Menengah
@@ -98,14 +92,9 @@
             </ul>
           </div>
         </div>
-        <div
-          x-data="{ open:false }"
-          @click="open=!open"
-          class="flex-1 cursor-pointer">
-          <div
-            class="flex justify-between p-2 rounded-md hover:bg-blue-900 hover:text-white"
-            :class="open ? 'bg-blue-900 text-white' : 'text-gray-600'"
-            >
+        <div x-data="{ open:false }" @click="open=!open" class="flex-1 cursor-pointer">
+          <div class="flex justify-between p-2 rounded-md hover:bg-blue-900 hover:text-white"
+            :class="open ? 'bg-blue-900 text-white' : 'text-gray-600'">
             <div class="flex justify-items-stretch">
               <svg class="w-5 h-5 my-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M8 2a1 1 0 000 2h2a1 1 0 100-2H8z"></path>
@@ -122,7 +111,8 @@
                 clip-rule="evenodd"></path>
             </svg>
           </div>
-          <div :class="open ? 'block' : 'hidden'" class="relative p-2 font-semibold text-xs ml-6 transform duration-300 ease-in-out">
+          <div :class="open ? 'block' : 'hidden'"
+            class="relative p-2 font-semibold text-xs ml-6 transform duration-300 ease-in-out">
             <ul>
               <li class="my-1 text-gray-600 hover:text-blue-500">
                 Usul RPP
@@ -133,14 +123,9 @@
             </ul>
           </div>
         </div>
-        <div
-          x-data="{ open:false }"
-          @click="open=!open"
-          class="flex-1 cursor-pointer">
-          <div
-            class="flex justify-between p-2 rounded-md hover:bg-blue-900 hover:text-white"
-            :class="open ? 'bg-blue-900 text-white' : 'text-gray-600'"
-            >
+        <div x-data="{ open:false }" @click="open=!open" class="flex-1 cursor-pointer">
+          <div class="flex justify-between p-2 rounded-md hover:bg-blue-900 hover:text-white"
+            :class="open ? 'bg-blue-900 text-white' : 'text-gray-600'">
             <div class="flex justify-items-stretch">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
@@ -157,7 +142,8 @@
                 clip-rule="evenodd"></path>
             </svg>
           </div>
-          <div :class="open ? 'block' : 'hidden'" class="relative p-2 font-semibold text-xs ml-6 transform duration-300 ease-in-out">
+          <div :class="open ? 'block' : 'hidden'"
+            class="relative p-2 font-semibold text-xs ml-6 transform duration-300 ease-in-out">
             <ul>
               <li class="my-1 text-gray-600 hover:text-blue-500">
                 Usul RPerpres
@@ -175,7 +161,11 @@
         <div
           class="flex justify-between text-gray-600 p-2 rounded-md hover:bg-blue-900 hover:text-white cursor-pointer">
           <div class="flex justify-items-stretch">
-<svg class="w-5 h-5 my-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"></path></svg>
+            <svg class="w-5 h-5 my-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z">
+              </path>
+            </svg>
             <a href="#" class="text-xs font-semibold my-1 ml-3">Penyusunan</a>
           </div>
           <svg class="w-5 h-5 my-1 ml-20" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -187,7 +177,9 @@
         <div
           class="flex justify-between text-gray-600 p-2 rounded-md hover:bg-blue-900 hover:text-white cursor-pointer">
           <div class="flex justify-items-stretch">
-<svg class="w-5 h-5 my-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"></path></svg>
+            <svg class="w-5 h-5 my-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"></path>
+            </svg>
             <a href="#" class="text-xs font-semibold my-1 ml-3">Penyelarasan</a>
           </div>
           <svg class="w-5 h-6 my-1 ml-20" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -240,30 +232,249 @@
         <p class="text-xs text-gray-600 mt-1">Sistem Perencanaan Hukum Nasional</p>
       </div>
     </div>
-    <div class="w-full rounded-3xl ml-1 bg-white opacity-75 px-1 py-1">
-      <div class="sticky top-0 z-30">
+    <div class="w-full lg:w-full lg:translate-x-0 rounded-3xl ml-1 bg-white opacity-75 px-1 py-1 transition transform">
+      <div class="">
         <div class="w-full h-20 px-6 flex items-center justify-between">
-
           <!-- left navbar -->
           <div class="flex">
-
             <!-- mobile hamburger -->
-            <div class="inline-block lg:hidden flex items-center mr-4">
-              <button @click="sidebarOpen=!sidebarOpen"
-                class="hover:text-blue-500 text-gray-600 hover:border-white focus:outline-none navbar-burger">
+            <div x-data="{menuOpen:false}" class="lg:hidden flex items-center mr-4">
+              <button @click="menuOpen=!menuOpen"
+                class="rounded-md p-2 text-gray-700 hover:text-gray-800 focus:outline-none navbar-burger">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd"
                     d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1z"
                     clip-rule="evenodd"></path>
                 </svg>
               </button>
-            </div>
+              <div :class="menuOpen?'block':'hidden'"
+                class="absolute bottom-0 shadow-xl rounded-3xl left-0 h-full overflow-y-scroll transition duration-300 transform w-full bg-gray-100 z-50">
 
+                <div class="flex-col justify-between">
+                  <!-- logo -->
+                  <div class="w-1/2 flex justify-center px-4 my-6 mb-6">
+                  <button @click="menuOpen=false">
+                    <svg class="w-5 h-5 mt-3 mr-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                  </button>
+                    <h5 class="rounded-full bg-blue-500 text-white font-extrabold p-2 shadow-xl">BPHN</h5>
+                    <p class="font-extrabold text-lg text-gray-700 mt-2">Sirenkumnas</p>
+                  </div>
+                </div>
+
+                <div class="mt-6 px-2">
+                  <div
+                    class="bg-blue-500 text-white p-2 rounded-md flex justify-items-start hover:bg-blue-900 cursor-pointer">
+                    <svg class="w-5 h-5 my-1" fill="currentColor" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+                      </path>
+                    </svg>
+                    <a href="#" class="text-xs font-semibold my-1 ml-3">Dashboard</a>
+                  </div>
+                  <div
+                    class="p-2 text-gray-600 mt-2 rounded-md flex justify-items-stretch hover:bg-blue-500 hover:text-white  cursor-pointer">
+                    <svg class="w-5 h-5 my-1" fill="currentColor" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z">
+                      </path>
+                    </svg>
+                    <a href="#" class="text-xs font-semibold my-1 ml-3">Monev</a>
+                  </div>
+                </div>
+
+                <div class="mt-6 px-2">
+                  <p class="text-xs ml-3 font-semibold mb-2 text-gray-500">PENGUSULAN</p>
+                  <div x-data="{ open:false }" @click="open=!open" class="flex-1 cursor-pointer">
+                    <div class="flex justify-between p-2 rounded-md hover:bg-blue-900 hover:text-white"
+                      :class="open ? 'bg-blue-900 text-white' : 'text-gray-600'">
+                      <div class="flex justify-items-stretch">
+                        <svg class="w-5 h-5 my-1" fill="currentColor" viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                          <path fill-rule="evenodd"
+                            d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                        <a href="#" class="text-xs font-semibold my-1 ml-2">RUU</a>
+                      </div>
+                      <svg :class="open ? 'rotate-90' : ''"
+                        class="w-5 h-5 my-1 ml-20 transform duration-300 ease-in-out" fill="currentColor"
+                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <div :class="open ? 'block' : 'hidden'"
+                      class="relative p-2 font-semibold text-xs ml-6 transform duration-300 ease-in-out">
+                      <ul>
+                        <li class="my-1 text-gray-600 hover:text-blue-500">
+                          Prolegnas Jangka Menengah
+                        </li>
+                        <li class="my-1 text-gray-600 hover:text-blue-500">
+                          Prolegnas Prioritas
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div x-data="{ open:false }" @click="open=!open" class="flex-1 cursor-pointer">
+                    <div class="flex justify-between p-2 rounded-md hover:bg-blue-900 hover:text-white"
+                      :class="open ? 'bg-blue-900 text-white' : 'text-gray-600'">
+                      <div class="flex justify-items-stretch">
+                        <svg class="w-5 h-5 my-1" fill="currentColor" viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8 2a1 1 0 000 2h2a1 1 0 100-2H8z"></path>
+                          <path
+                            d="M3 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v6h-4.586l1.293-1.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L10.414 13H15v3a2 2 0 01-2 2H5a2 2 0 01-2-2V5zM15 11h2a1 1 0 110 2h-2v-2z">
+                          </path>
+                        </svg>
+                        <a href="#" class="text-xs font-semibold my-1 ml-2">RPP</a>
+                      </div>
+                      <svg :class="open ? 'rotate-90' : ''"
+                        class="w-5 h-5 my-1 ml-20 transform duration-300 ease-in-out" fill="currentColor"
+                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <div :class="open ? 'block' : 'hidden'"
+                      class="relative p-2 font-semibold text-xs ml-6 transform duration-300 ease-in-out">
+                      <ul>
+                        <li class="my-1 text-gray-600 hover:text-blue-500">
+                          Usul RPP
+                        </li>
+                        <li class="my-1 text-gray-600 hover:text-blue-500">
+                          Daftar Usulan
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div x-data="{ open:false }" @click="open=!open" class="flex-1 cursor-pointer">
+                    <div class="flex justify-between p-2 rounded-md hover:bg-blue-900 hover:text-white"
+                      :class="open ? 'bg-blue-900 text-white' : 'text-gray-600'">
+                      <div class="flex justify-items-stretch">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                          <path fill-rule="evenodd"
+                            d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd"></path>
+                        </svg>
+                        <a href="#" class="text-xs font-semibold my-1 ml-2">RPerpres</a>
+                      </div>
+                      <svg :class="open ? 'rotate-90' : ''"
+                        class="w-5 h-5 my-1 ml-20 transform duration-300 ease-in-out" fill="currentColor"
+                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                          d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <div :class="open ? 'block' : 'hidden'"
+                      class="relative p-2 font-semibold text-xs ml-6 transform duration-300 ease-in-out">
+                      <ul>
+                        <li class="my-1 text-gray-600 hover:text-blue-500">
+                          Usul RPerpres
+                        </li>
+                        <li class="my-1 text-gray-600 hover:text-blue-500">
+                          Daftar Usulan
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-6 px-2">
+                  <p class="text-xs ml-3 font-semibold mb-2 text-gray-500">NASKAH AKADEMIK</p>
+                  <div
+                    class="flex justify-between text-gray-600 p-2 rounded-md hover:bg-blue-900 hover:text-white cursor-pointer">
+                    <div class="flex justify-items-stretch">
+                      <svg class="w-5 h-5 my-1" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z">
+                        </path>
+                      </svg>
+                      <a href="#" class="text-xs font-semibold my-1 ml-3">Penyusunan</a>
+                    </div>
+                    <svg class="w-5 h-5 my-1 ml-20" fill="currentColor" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <div
+                    class="flex justify-between text-gray-600 p-2 rounded-md hover:bg-blue-900 hover:text-white cursor-pointer">
+                    <div class="flex justify-items-stretch">
+                      <svg class="w-5 h-5 my-1" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z"></path>
+                      </svg>
+                      <a href="#" class="text-xs font-semibold my-1 ml-3">Penyelarasan</a>
+                    </div>
+                    <svg class="w-5 h-6 my-1 ml-20" fill="currentColor" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="mt-6 px-2">
+                  <p class="text-xs ml-3 font-semibold mb-2 text-gray-500">LAPORAN</p>
+                  <div
+                    class="flex justify-between text-gray-600 p-2 rounded-md hover:bg-blue-900 hover:text-white cursor-pointer">
+                    <div class="flex justify-items-stretch">
+                      <svg class="w-5 h-5 my-1" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                        <path fill-rule="evenodd"
+                          d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                          clip-rule="evenodd"></path>
+                      </svg>
+                      <a href="#" class="text-xs font-semibold my-1 ml-3">Penyusunan</a>
+                    </div>
+                    <svg class="w-5 h-5 my-1 ml-20" fill="currentColor" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <div
+                    class="flex justify-between text-gray-600 p-2 rounded-md hover:bg-blue-900 hover:text-white cursor-pointer">
+                    <div class="flex justify-items-stretch">
+                      <svg class="w-5 h-5 my-1" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 2a1 1 0 000 2h2a1 1 0 100-2H8z"></path>
+                        <path
+                          d="M3 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v6h-4.586l1.293-1.293a1 1 0 00-1.414-1.414l-3 3a1 1 0 000 1.414l3 3a1 1 0 001.414-1.414L10.414 13H15v3a2 2 0 01-2 2H5a2 2 0 01-2-2V5zM15 11h2a1 1 0 110 2h-2v-2z">
+                        </path>
+                      </svg>
+                      <a href="#" class="text-xs font-semibold my-1 ml-3">Penyelarasan</a>
+                    </div>
+                    <svg class="w-5 h-6 my-1 ml-20" fill="currentColor" viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class="mt-6 px-4 flex flex-col">
+                  <p class="font-bold text-black text-xs">&copy;Sirenkumas. 2020</p>
+                  <p class="text-xs text-gray-600 mt-1">Sistem Perencanaan Hukum Nasional</p>
+                </div>
+              </div>
+            </div>
             <div class="flex flex-col">
               <h5 class="font-bold text- text-gray-800">Dashboard Overview</h5>
               <h6 class="font-semibold text-xs text-gray-400">Today, 16th November 2020</h6>
             </div>
-
           </div>
 
           <!-- right navbar -->
@@ -290,7 +501,6 @@
             <!-- dropdown menu end -->
           </div>
         </div>
-
       </div>
     </div>
 
